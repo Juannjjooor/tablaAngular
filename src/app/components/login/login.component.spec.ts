@@ -1,25 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LoginComponent } from "./login.component";
+import { FormBuilder } from "@angular/forms";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { Router } from "@angular/router";
 
-import { LoginComponent } from './login.component';
-
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
-    })
-    .compileComponents();
-  });
+describe('Formularios', () => {
+  let componente: LoginComponent;
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    componente = new LoginComponent(new FormBuilder(), new MatSnackBar(), new Router());
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Debe de crear un formulario con dos campos, usuario y password', () => {
+    expect(componente.form.contains('usuario')).toBeTruthy();
+    expect(componente.form.contains('password')).toBeTruthy();
   });
 });
