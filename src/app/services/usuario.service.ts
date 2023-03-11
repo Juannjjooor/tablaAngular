@@ -1,33 +1,36 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../interfaces/usuario';
+import { Medicine } from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  listUsuarios: Usuario[] = [
-    {usuario: 'jjGonzález', nombre: 'Juan José', apellido: 'González', sexo: 'Varón'},
-    {usuario: 'mPérez', nombre: 'Miguel', apellido: 'Pérez', sexo: 'Varón'},
-    {usuario: 'wiameM', nombre: 'Wiame', apellido: 'Mohamed', sexo: 'Mujer'},
-    {usuario: 'toñiS', nombre: 'Toñi', apellido: 'Sevilla', sexo: 'Mujer'},
-    {usuario: 'jPalomo', nombre: 'José', apellido: 'Palomo', sexo: 'Varón'},
-    {usuario: 'siMebarak', nombre: 'Shakira Isabel', apellido: 'Mebarak', sexo: 'Mujer'},
+  listdrugs: Medicine[] = [
+    {quantity: 3, name: 'Beconase', date: '05/03/2023', category: 'Ear nose throal', price: 23},
+    {quantity: 1, name: 'Glucosamina', date: '03/01/2023', category: 'Bone and joints', price: 25.99},
+    {quantity: 1, name: 'Retilut', date: '22/01/2023', category: 'Eye care', price: 29.90},
+    {quantity: 1, name: 'Himalaya', date: '03/03/2023', category: 'urinary', price: 12.41},
+    {quantity: 1, name: 'Neuro-Nutrition', date: '03/03/2023', category: 'Nerves', price: 79},
+    {quantity: 1, name: 'Anquilea', date: '03/03/2023', category: 'Digestive', price: 8.92},
+    {quantity: 1, name: 'Eladiet Digest', date: '03/03/2023', category: 'Digestive', price: 11.77},
+    
+    
     
   ];
 
   constructor() { }
 
-  getUsuario() {
-    return this.listUsuarios.slice();
+  getDrug() {
+    return this.listdrugs.slice();
   }
 
-  eliminarUsuario(index: number) {
-    this.listUsuarios.splice(index, 1);
+  deleteDrug(index: number) {
+    this.listdrugs.splice(index, 1);
 
   }
 
-  agregarUsuario(usuario: Usuario) {
-    this.listUsuarios.unshift(usuario);
+  addDrug(index: Medicine) {
+    this.listdrugs.unshift(index);
   }
 }

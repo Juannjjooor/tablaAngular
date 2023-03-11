@@ -1,15 +1,15 @@
 <div class="container">
   <mat-toolbar>
-    <span>Crear Usuario</span>
+    <span>Add drugs</span>
   </mat-toolbar>
 
   <mat-card style="margin-top: 10px;">
-    <form [formGroup]="form" (ngSubmit)="agregarUsuario()">
+    <form [formGroup]="form" (ngSubmit)="addDrugs()">
       <mat-grid-list cols="4" rowHeight="70px">
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field class="ancho">
-            <mat-label>Usuario</mat-label>
-            <input matInput autocomplete="off" formControlName="usuario">
+            <mat-label>Quantity</mat-label>
+            <input matInput autocomplete="off" formControlName="quantity">
           </mat-form-field>
         </mat-grid-tile>
 
@@ -19,32 +19,35 @@
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field class="ancho">
-            <mat-label>Nombre</mat-label>
-            <input matInput autocomplete="off" formControlName="nombre">
+            <mat-label>Name</mat-label>
+            <input matInput autocomplete="off" formControlName="name">
           </mat-form-field>
         </mat-grid-tile>
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field class="ancho">
-            <mat-label>Apellido</mat-label>
-            <input matInput autocomplete="off" formControlName="apellido">
+            <mat-label>Date</mat-label>
+            <input matInput autocomplete="off" formControlName="date">
           </mat-form-field>
         </mat-grid-tile>
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
           <mat-form-field class="ancho">
-            <mat-label>Sexo</mat-label>
-            <mat-select formControlName="sexo">
-              <mat-option *ngFor="let item of sexo" [value]="item">
-                {{item}}
-              </mat-option>
-            </mat-select>
+            <mat-label>Category</mat-label>
+            <input matInput autocomplete="off" formControlName="category">
           </mat-form-field>
         </mat-grid-tile>
 
         <mat-grid-tile [colspan]="1" [rowspan]="1">
-          <button mat-raised-button style="margin-right: 20px;">Volver</button>
-          <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Aceptar</button>
+          <mat-form-field class="ancho">
+            <mat-label>Price</mat-label>
+            <input matInput autocomplete="off" formControlName="price">
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+          <button mat-raised-button style="margin-right: 20px;">Back</button>
+          <button type="submit" [disabled]="form.invalid" mat-raised-button color="primary">Accept</button>
         </mat-grid-tile>
 
       </mat-grid-list>

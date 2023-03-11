@@ -4,11 +4,7 @@
     "redirect": "/dashboard"
   },
   {
-    "nombre": "Usuarios",
+    "nombre": "Drugs",
     "redirect": "/dashboard/usuarios"
-  },
-  {
-    "nombre": "Reportes",
-    "redirect": "/dashboard/reportes"
   }
 ]

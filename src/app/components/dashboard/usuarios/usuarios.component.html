@@ -1,12 +1,12 @@
 <div class="container">
     <mat-toolbar>
-      <span>Usuarios</span>
+      <span>TREATMENTS</span>
       <div class="example-spacer"></div>
 
-      <button mat-raised-button color="warn" routerLink="/dashboard/crear-usuario">AGREGAR</button>
+      <button mat-raised-button color="warn" routerLink="/dashboard/crear-usuario">ADD</button>
     </mat-toolbar>
 
-    <div *ngIf="listUsuarios.length > 0">
+    <div *ngIf="userList.length > 0">
 
       <mat-form-field>
         <mat-label>Filter</mat-label>
@@ -17,36 +17,42 @@
   
           <!--- Note that these columns can be defined in any order.
                 The actual rendered columns are set as a property on the row definition" -->
+
+          <!-- Quantity Column -->
+          <ng-container matColumnDef="quantity">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+            <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+          </ng-container>
         
           <!-- Usuario Column -->
-          <ng-container matColumnDef="usuario">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Usuario </th>
-            <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
           </ng-container>
         
           <!-- Nombre Column -->
-          <ng-container matColumnDef="nombre">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
-            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
           </ng-container>
         
           <!-- Apellido Column -->
-          <ng-container matColumnDef="apellido">
-            <th mat-header-cell *matHeaderCellDef> Apellido </th>
-            <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+            <td mat-cell *matCellDef="let element"> {{element.category}} </td>
           </ng-container>
         
           <!-- Sexo Column -->
-          <ng-container matColumnDef="sexo">
-            <th mat-header-cell *matHeaderCellDef> Sexo </th>
-            <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
+          <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Price ($) </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
           </ng-container>
     
           <!-- Acciones Column -->
           <ng-container matColumnDef="acciones">
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element; let i = index" style="text-align: right">
-              <a class="pointer" (click)="eliminarUsuario(i)" style="color: rgb(3, 92, 37);" matTooltip="Eliminar Usuario">
+              <a class="pointer" (click)="deleteTask(i)" style="color: rgb(3, 92, 37);" matTooltip="Eliminar Usuario">
                 <mat-icon>delete</mat-icon>
               </a>
             </td>
@@ -59,7 +65,7 @@
       </div>
     </div>
 
-    <h2 *ngIf="listUsuarios.length == 0">No hay usuarios para mostrar</h2>
+    <h2 *ngIf="userList.length == 0">No treatments to display</h2>
 
     
     

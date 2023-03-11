@@ -7,7 +7,6 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SharedModule } from '../shared/shared.module';
-import { ReportesComponent } from './reportes/reportes.component';
 import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.component';
 
 
@@ -17,7 +16,6 @@ import { CrearUsuarioComponent } from './usuarios/crear-usuario/crear-usuario.co
     UsuariosComponent,
     InicioComponent,
     NavbarComponent,
-    ReportesComponent,
     CrearUsuarioComponent
   ],
   imports: [

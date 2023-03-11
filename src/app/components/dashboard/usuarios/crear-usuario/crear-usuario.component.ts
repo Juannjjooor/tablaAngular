@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/interfaces/usuario';
+import { Medicine} from 'src/app/interfaces/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -11,7 +11,6 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./crear-usuario.component.css']
 })
 export class CrearUsuarioComponent implements OnInit {
-  sexo: any [] = ['Masculino', 'Femenino']
   form: FormGroup;
 
   constructor(private fb: FormBuilder,
@@ -20,10 +19,11 @@ export class CrearUsuarioComponent implements OnInit {
               private _snackBar: MatSnackBar,
               ) { 
     this.form = this.fb.group({
-      usuario: ['', Validators.required],
-      nombre: ['', Validators.required],
-      apellido: ['', Validators.required],
-      sexo: ['', Validators.required],
+      quantity: ['', Validators.required],
+      name: ['', Validators.required],
+      date: ['', Validators.required],
+      category: ['', Validators.required],
+      price: ['', Validators.required],
 
     })
   }
@@ -31,20 +31,21 @@ export class CrearUsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  agregarUsuario() {
+  addDrugs() {
     console.log(this.form);
-    const user: Usuario = {
-      usuario: this.form.value.usuario,
-      nombre: this.form.value.nombre,
-      apellido: this.form.value.apellido,
-      sexo: this.form.value.sexo,
+    const user: Medicine = {
+      quantity: this.form.value.quantity,
+      name: this.form.value.name,
+      date: this.form.value.date,
+      category: this.form.value.category,
+      price: this.form.value.price,
     }
 
 
-    this._usuarioService.agregarUsuario(user);
+    this._usuarioService.addDrug(user);
     this.router.navigate(['/dashboard/usuarios'])
 
-    this._snackBar.open('El usuario ha sido agregado con éxito', '', {
+    this._snackBar.open('Drug has been successfully added', '', {
       duration: 1500,
       horizontalPosition: 'center',
       verticalPosition: 'bottom'

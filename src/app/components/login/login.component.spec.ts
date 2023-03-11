@@ -1,17 +1,28 @@
 import { LoginComponent } from "./login.component";
-import { FormBuilder } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { Router } from "@angular/router";
 
-describe('Formularios', () => {
+describe( 'Formularios', () => {
+
   let componente: LoginComponent;
 
-  beforeEach(() => {
-    componente = new LoginComponent(new FormBuilder(), new MatSnackBar(), new Router());
+  beforeEach( () => {
+    componente = new LoginComponent( new FormBuilder(),);
   });
 
-  it('Debe de crear un formulario con dos campos, usuario y password', () => {
-    expect(componente.form.contains('usuario')).toBeTruthy();
-    expect(componente.form.contains('password')).toBeTruthy();
+  it( 'Debe de crear un formulario con dos campos, email y password', () => {
+    expect( componente.form.contains('usuario') ).toBeTruthy();
+    expect( componente.form.contains('password') ).toBeTruthy();
+
   });
+
+  it( 'El usuario debe de ser obligatorio', () => {
+    const control = componente.form.get('usuario');
+    control?.setValue('');
+
+    expect( control?.valid ).toBeFalsy();
+  });
+
+  
 });
