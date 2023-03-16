@@ -1,0 +1,8 @@
+<mat-toolbar class="md-nav-bar">
+    <span>MEDICATION LIST</span>
+    <span class="example-spacer"></span>
+    <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{ item.nombre }}</button>
+    <button mat-icon-button class="example-icon" (click)="logout()" aria-label="Example icon-button with menu icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>

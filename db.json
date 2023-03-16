@@ -1,0 +1,155 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Juanjo",
+        "usuario": "Juanjo",
+        "password": "admin123",
+        "drugs": [
+          {
+            "id": 1,
+            "quantity": 3,
+            "name": "Beconase",
+            "category": "Ear, nose and throal",
+            "price": 23
+          },
+          {
+            "id": 2,
+            "quantity": 1,
+            "name": "Glucosamina",
+            "category": "Bone and joints",
+            "price": 25.99
+          },
+          {
+            "id": 3,
+            "quantity": 1,
+            "name": "Retilut",
+            "category": "Eye care",
+            "price": 29.9
+          },
+          {
+            "id": 4,
+            "quantity": 2,
+            "name": "Himalaya",
+            "category": "Urinary",
+            "price": 12.41
+          },
+          {
+            "id": 5,
+            "quantity": 3,
+            "name": "Neuro-Nutrition",
+            "category": "Nerves",
+            "price": 79
+          },
+          {
+            "id": 6,
+            "quantity": 3,
+            "name": "Neuro-Nutrition",
+            "category": "Nerves",
+            "price": 80
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Mike",
+        "usuario": "Miguel",
+        "password": "admin1234",
+        "drugs": [
+          {
+            "id": 1,
+            "quantity": 2,
+            "name": "Beconase",
+            "category": "Ear, nose and throal",
+            "price": 23
+          },
+          {
+            "id": 2,
+            "quantity": 4,
+            "name": "Glucosamina",
+            "category": "Bone and joints",
+            "price": 25.99
+          },
+          {
+            "id": 3,
+            "quantity": 1,
+            "name": "Retilut",
+            "category": "Eye care",
+            "price": 29.9
+          },
+          {
+            "id": 4,
+            "quantity": 2,
+            "name": "Himalaya",
+            "category": "Urinary",
+            "price": 12.41
+          },
+          {
+            "id": 5,
+            "quantity": 1,
+            "name": "Neuro-Nutrition",
+            "category": "Nerves",
+            "price": 79
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Francisco",
+        "usuario": "Frank",
+        "password": "admin12345",
+        "drugs": [
+          {
+            "id": 1,
+            "quantity": 5,
+            "name": "Beconase",
+            "category": "Ear, nose and throal",
+            "price": 23
+          },
+          {
+            "id": 2,
+            "quantity": 1,
+            "name": "Glucosamina",
+            "category": "Bone and joints",
+            "price": 25.99
+          },
+          {
+            "id": 3,
+            "quantity": 5,
+            "name": "Retilut",
+            "category": "Eye care",
+            "price": 29.9
+          },
+          {
+            "id": 4,
+            "quantity": 2,
+            "name": "Himalaya",
+            "category": "Urinary",
+            "price": 12.41
+          },
+          {
+            "id": 5,
+            "quantity": 1,
+            "name": "Neuro-Nutrition",
+            "category": "Nerves",
+            "price": 79
+          }
+        ]
+      },
+      {
+        "name": "George",
+        "usuario": "Georgino",
+        "password": "admin123456",
+        "id": 4,
+        "drugs": [
+          {
+            "quantity": 5,
+            "name": "Paracetamol",
+            "category": "Antibiotic",
+            "price": 15
+          }
+        ]
+        
+      }
+    ]
+  }
