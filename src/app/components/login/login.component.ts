@@ -4,9 +4,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { LoggedService } from 'src/app/services/logged.service';
 
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,6 +13,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   loading = false;
   hasError: boolean = false;
+  isLogged = false;
   
   constructor(private fb: FormBuilder, 
               private _snackBar: MatSnackBar,
@@ -29,6 +27,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Check if user is already logged in
+    const userId = localStorage.getItem('userId');
+    if (userId) {
+      this.isLogged = true;
+    }
   }
 
   ingresar () {
@@ -65,11 +68,22 @@ export class LoginComponent implements OnInit {
 
     const {usuario, password } = this.form.value;
 
+    // Check if user is already logged in
+    if (this.isLogged) {
+      this._snackBar.open('El usuario ya se ha autenticado.', '', {
+        duration: 5000,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom'
+      });
+      return;
+    }
+
     this.loggedService.purchaserExist(usuario, password)
     .subscribe((data: string | any[]) => {
       if (data.length > 0) {
         const { id } = data[0];
         localStorage.setItem('userId', JSON.stringify(id));
+        this.isLogged = true;
         this.router.navigate(['dashboard']);
       }else {
         this.hasError = true;

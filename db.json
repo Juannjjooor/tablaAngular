@@ -10,6 +10,7 @@
             "id": 1,
             "quantity": 3,
             "name": "Beconase",
+            "date": "01/01/2023",
             "category": "Ear, nose and throal",
             "price": 23
           },
@@ -17,6 +18,7 @@
             "id": 2,
             "quantity": 1,
             "name": "Glucosamina",
+            "date": "02/01/2023",
             "category": "Bone and joints",
             "price": 25.99
           },
@@ -24,6 +26,7 @@
             "id": 3,
             "quantity": 1,
             "name": "Retilut",
+            "date": "03/01/2023",
             "category": "Eye care",
             "price": 29.9
           },
@@ -31,6 +34,7 @@
             "id": 4,
             "quantity": 2,
             "name": "Himalaya",
+            "date": "04/01/2023",
             "category": "Urinary",
             "price": 12.41
           },
@@ -38,6 +42,7 @@
             "id": 5,
             "quantity": 3,
             "name": "Neuro-Nutrition",
+            "date": "05/01/2023",
             "category": "Nerves",
             "price": 79
           },
@@ -45,6 +50,7 @@
             "id": 6,
             "quantity": 3,
             "name": "Neuro-Nutrition",
+            "date": "01/02/2023",
             "category": "Nerves",
             "price": 80
           }
@@ -60,6 +66,7 @@
             "id": 1,
             "quantity": 2,
             "name": "Beconase",
+            "date": "01/02/2023",
             "category": "Ear, nose and throal",
             "price": 23
           },
@@ -67,6 +74,7 @@
             "id": 2,
             "quantity": 4,
             "name": "Glucosamina",
+            "date": "01/02/2023",
             "category": "Bone and joints",
             "price": 25.99
           },
@@ -74,6 +82,7 @@
             "id": 3,
             "quantity": 1,
             "name": "Retilut",
+            "date": "03/02/2023",
             "category": "Eye care",
             "price": 29.9
           },
@@ -81,6 +90,7 @@
             "id": 4,
             "quantity": 2,
             "name": "Himalaya",
+            "date": "05/02/2023",
             "category": "Urinary",
             "price": 12.41
           },
@@ -88,6 +98,7 @@
             "id": 5,
             "quantity": 1,
             "name": "Neuro-Nutrition",
+            "date": "20/02/2023",
             "category": "Nerves",
             "price": 79
           }
@@ -103,6 +114,7 @@
             "id": 1,
             "quantity": 5,
             "name": "Beconase",
+            "date": "01/03/2023",
             "category": "Ear, nose and throal",
             "price": 23
           },
@@ -110,6 +122,7 @@
             "id": 2,
             "quantity": 1,
             "name": "Glucosamina",
+            "date": "05/03/2023",
             "category": "Bone and joints",
             "price": 25.99
           },
@@ -117,6 +130,7 @@
             "id": 3,
             "quantity": 5,
             "name": "Retilut",
+            "date": "07/03/2023",
             "category": "Eye care",
             "price": 29.9
           },
@@ -124,6 +138,7 @@
             "id": 4,
             "quantity": 2,
             "name": "Himalaya",
+            "date": "10/03/2023",
             "category": "Urinary",
             "price": 12.41
           },
@@ -131,6 +146,7 @@
             "id": 5,
             "quantity": 1,
             "name": "Neuro-Nutrition",
+            "date": "15/03/2023",
             "category": "Nerves",
             "price": 79
           }
@@ -145,6 +161,7 @@
           {
             "quantity": 5,
             "name": "Paracetamol",
+            "date": "20/03/2023",
             "category": "Antibiotic",
             "price": 15
           }
